@@ -1,0 +1,139 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----------FIN DU RESET---------- */
+
+.navigation ul {
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 100px;
+}
+
+.laptop {
+	display: block;
+	list-style-type: none;
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+	width: 100%;
+	position: fixed;
+	
+	z-index: 10;
+	transition: all 0.5s ease;
+}
+
+.laptop li {
+	padding: 15px;
+	padding-top: 40px;
+	margin-right: 5px;
+	float: right;
+}
+
+.laptop li:not(#logo) {
+	margin-top: 18px;
+}
+
+#logo img {
+	width: 90px;
+	height: 30px;
+}
+
+#logo img:hover {
+	width: 93px;
+	height: 32px;
+	transition: 0.5s ease;
+}
+
+#logo {
+	margin-top: 9px;
+	margin-left: 1%;
+}
+
+.laptop a {
+	color: white;
+	text-decoration: none;
+}
+
+.laptop a::after {
+    content: '';
+    display: block;
+    margin-top: 5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+.laptop a:hover {
+	color: #e55d11;
+}
+
+#page1 {
+	height: 700px;
+	background-image: url(../images/header.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+#titre1 {
+	color: white;
+	padding-top: 320px;
+	font-size: 50px;
+}
+
+#soustitre1 {
+	font-family: 'Oswald', sans-serif;
+	margin-left: 45%;
+	letter-spacing: 2px;
+}
+
+#soustitre2 {
+	font-family: 'Oswald', sans-serif;
+	margin-left: 45%;
+	letter-spacing: 2px;
+}

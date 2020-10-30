@@ -3,38 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}<link rel="stylesheet" href="/css/style.css">{% endblock %}
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Cig-Record</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="{{ path('default') }}">Accueil</a>
-                    <a class="nav-link" href="#">Musiques</a>
-                    <a class="nav-link" href="#">Artistes</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">new letters</a>
-                    <a class="nav-link" href="#">Shop</a>
-                    <a class="nav-link" href="#">About</a>
-                    {%  if app.user is defined  %}
-                    <a class="nav-link" href="{{ path('user_show',{'id' : app.user.id}) }}">Profile</a>
-                    <a class="nav-link" href="{{ path('default') }}">Mes Projets</a>
-                    <a class="nav-link" href="{{ path('comment_index') }}">Mes Commentaires</a>
-                    {% else %}
-                        <a class="nav-link" href="{{ path('app_login') }}">Login</a>
-                    {% endif %}
 
+<div id="page1">
+		<nav class="navigation">
+		<ul class="laptop">
+			<li id="logo" style="float: left;"><a class="scroll" href="#page1"><img src="Sources/LOGO-Aurelian_Santana_03.png"></a></li>
+			<li><a class="scroll" href="#page5">LOGIN</a></li>
+			<li><a class="scroll" href="#page4">SHOP</a></li>
+			<li><a class="scroll" href="#page3">NEWS</a></li>
+			<li><a class="scroll" href="#page2">ARTISTES</a></li>	
+            <li><a class="scroll" href="#page1">MUSIQUE</a></li>	
+            <li><a class="scroll" href="#page1">ABOUT</a></li>
+		</ul>
+		</nav>
 
-
-                </div>
-            </div>
-        </div>
-    </nav>
+        <div id="titre1">
+			<h1 id="soustitre1">NO PRESSURE</h1>
+			<h1 id="soustitre2">DISPONIBLE</h1>
+		</div>
+</div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
