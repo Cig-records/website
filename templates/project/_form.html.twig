@@ -1,0 +1,10 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+{#   {% for row in form.pistes %}
+        {{ form_widget(row.title,{'attr': {'class': 'form-control'}}) }}
+        {{ form_widget(row.path,{'attr': {'class': 'form-control'}}) }}
+
+
+    {% endfor %}#}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

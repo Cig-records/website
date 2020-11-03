@@ -2,20 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d08fc52-4e93-4fe1-90d9-4ac219e16dc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PisteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ProjectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Piste.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/PisteType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ProjectType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PisteRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ProjectRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/piste/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/piste/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/piste/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/piste/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/piste/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/piste/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/project/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/project/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/project/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/project/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/project/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/project/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/UserAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/UserAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -131,13 +145,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jGr0bs5w6fqsWnQMHHuDWJrRUo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -153,12 +170,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603441047930</updated>
-      <workItem from="1603441049473" duration="7388000" />
+      <workItem from="1603441049473" duration="8067000" />
+      <workItem from="1604404702168" duration="2417000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="210" width="545" height="373" key="NewPhpClassDialog" timestamp="1603447885075">
