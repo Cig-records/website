@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/admin/dashboard", name="admin_dashboard_")
+ * @Route("/admin", name="admin_dashboard_")
  */
 class DashboardController extends AbstractController
 {

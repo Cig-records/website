@@ -13,9 +13,37 @@
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="{{ path('admin_artist_create') }}" class="btn btn-primary">Ajouter un artiste</a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12">
-                    <p>Ceci est un message</p>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for artist in artists %}
+                            <tr>
+                                <th scope="row">{{ artist.id }}</th>
+                                <td>{{ artist.name }}</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Artist actions">
+                                        <a href="{{ url('admin_artist_edit', {id: artist.id}) }}" class="btn btn-primary">Modifier</a>
+                                        <a href="{{ url('admin_artist_delete', {id: artist.id}) }}" class="btn btn-danger">Supprimer</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

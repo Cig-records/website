@@ -7,15 +7,45 @@
     <section class="pt-5 pb-5">
         <div class="container">
 
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-12">
                     <h1>Utilisateurs</h1>
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="{{ path('admin_user_create') }}" class="btn btn-primary">Ajouter un utilisateur</a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12">
-                    <p>Ceci est un message</p>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Pseudo</th>
+                            <th scope="col">Nom complet</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <th scope="row">{{ user.id }}</th>
+                            <td>{{ user.pseudo }}</td>
+                            <td>{{ user.firstname }} {{ user.lastname | upper }}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="User actions">
+                                    <a href="{{ url('admin_user_edit', {id: user.id}) }}" class="btn btn-primary">Modifier</a>
+                                    <a href="{{ url('admin_user_delete', {id: user.id}) }}" class="btn btn-danger">Supprimer</a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

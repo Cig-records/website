@@ -1,0 +1,32 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration : Utilisateurs{% endblock %}
+
+{% block body %}
+
+<section class="pt-5 pb-5">
+    <div class="container">
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <h1>Modifier un utilisateur</h1>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                {{ include('admin/user/_form_delete.html.twig') }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                {{ include('admin/user/_form.html.twig', {'button_label': 'Update'}) }}
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}
