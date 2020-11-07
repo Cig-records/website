@@ -13,9 +13,39 @@
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="{{ path('admin_album_create') }}" class="btn btn-primary">Ajouter un album</a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12">
-                    <p>Ceci est un message</p>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Artiste</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for album in albums %}
+                            <tr>
+                                <th scope="row">{{ album.id }}</th>
+                                <td>{{ album.name }}</td>
+                                <td>{{ album.artist.name }}</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Album actions">
+                                        <a href="{{ url('admin_album_edit', {id: album.id}) }}" class="btn btn-primary">Modifier</a>
+                                        <a href="{{ url('admin_album_delete', {id: album.id}) }}" class="btn btn-danger">Supprimer</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

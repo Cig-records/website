@@ -4,5 +4,68 @@
 
 {% block body %}
 
+    <section id="introduction" class="mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1>CigRecords<br><small>Un label de musique pour les fans de rock</small></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="a-propos">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <figure style="background-image:url(https://picsum.photos/600/600)"></figure>
+                </div>
+                <div class="col-6">
+                    <h2>Qui sommes nous ?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolorum earum est excepturi fuga nam necessitatibus optio quam repellendus sunt?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad ipsa iusto nesciunt, odio omnis.</p>
+                    <a href="#nos-artistes" class="btn btn-outline-primary">Découvrir les artistes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nouveautes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Derniers albums sortis</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="derniers-albums">
+                        {% for album in albums %}
+                        <div class="album">
+                            <span class="nom-artiste">{{ album.artist.name }}</span>
+                            <span class="nom-album">Album</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nos-artistes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" style="background-color: rgba(125,125,125,.35);height:7rem;">
+                    <div class="content">
+                        <h2>Nos artistes</h2>
+                        <div class="artistes">
+                            <span>A remplir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

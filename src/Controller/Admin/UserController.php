@@ -39,7 +39,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="new", methods={"GET","POST"})
+     * @Route("/create", name="create", methods={"GET","POST"})
      * @param Request $request
      * @param PasswordEncoderInterface $encoder
      * @return Response
@@ -51,7 +51,7 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if (!$form->isSubmitted() || !$form->isValid()) {
-            return $this->render('user/new.html.twig', [
+            return $this->render('admin/user/create.html.twig', [
                 'user' => $user,
                 'form' => $form->createView(),
             ]);
@@ -68,11 +68,13 @@ class UserController extends AbstractController
 
     /**
      * @Route("/{id}", name="show", methods={"GET"})
+     * @param UserRepository $userRepository
      * @param User $user
      * @return Response
      */
-    public function show(User $user): Response
+    public function show(UserRepository $userRepository, User $user): Response
     {
+        // $user = $userRepository->find($id);
         return $this->render('user/show.html.twig', [
             'user' => $user,
         ]);
@@ -91,7 +93,7 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if (!$form->isSubmitted() || !$form->isValid()) {
-            return $this->render('user/edit.html.twig', [
+            return $this->render('admin/user/edit.html.twig', [
                 'user' => $user,
                 'form' => $form->createView(),
             ]);

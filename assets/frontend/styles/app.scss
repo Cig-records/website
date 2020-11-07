@@ -1,5 +1,183 @@
 @import '~bootstrap';
 
 body {
-    background-color: lightgray;
+    background-color: black;
+    color: white;
+}
+
+section {
+
+    &#introduction {
+
+        background-image: url(../images/fond-introduction.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+        height: calc(100vh - 3rem);
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container-fluid {
+            z-index: 2;
+        }
+
+        &:before {
+            background-color: rgba(0,0,0,.75);
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+    }
+
+    &#a-propos {
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        h2 {
+            margin-bottom: 3rem;
+        }
+
+        a.btn {
+            margin-top: 3rem;
+        }
+
+        figure {
+            background-position: center;
+            background-size: cover;
+            width: 95%;
+            height: 100%;
+            margin: 0;
+            display: block;
+
+            position: absolute;
+            left: 0;
+            top: -5rem;
+        }
+
+    }
+
+    &#nouveautes {
+
+        padding: 5rem 0;
+
+        h2 {
+            margin-bottom: 3rem;
+        }
+
+        .derniers-albums {
+
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+
+            .album {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 200px;
+                height: 200px;
+
+                padding: .75rem;
+                position: relative;
+
+                background-image: url(../images/album-cover.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                transition: 600ms ease-in-out;
+                overflow: hidden;
+
+                &:not(:first-of-type) {
+                    margin-left: 1rem;
+                }
+
+                &:before {
+                    display: none;
+                    content: '';
+                    background: rgba(255,0,0,.5);
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                &:hover {
+                    > span {
+                        transform: translateY(0);
+                    }
+                    &:before {
+                        display: block;
+                    }
+                }
+
+                > span {
+                    width: 100%;
+                    font-size: 1.15rem;
+                    transform: translateY(200px);
+
+                    &.nom-artiste {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    &#nos-artistes {
+
+        padding: 5rem 0;
+
+        [class^=col-] {
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.25rem
+        }
+
+    }
+}
+
+footer {
+    font-size: 1.15rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    a {
+
+        color: white;
+
+        &:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        &:not(:first-of-type) {
+            margin-left: 1rem;
+        }
+
+    }
 }
